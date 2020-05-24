@@ -11,12 +11,8 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Switch>
-          <Route path="/">
-            <LandingPageScreen />
-          </Route>
-          <Route path="/program">
-            <ProgramScreen />
-          </Route>
+          <Route path="/" exact component={LandingPageScreen} />
+          <Route path="/program" exact component={ProgramScreen} />
         </Switch>
       </BrowserRouter>
     </React.Fragment>
