@@ -7,8 +7,9 @@ const LandingPageScreen = () => {
   const articles = [
     {
       id: 0,
-      title: "Nye muligheter",
-      imgSrc: "https://via.placeholder.com/750",
+      title: "OnionMania",
+      imgHeader: "whoomp_header.png",
+      imgMain: "Whoomp.png",
     },
     {
       id: 1,
@@ -29,7 +30,7 @@ const LandingPageScreen = () => {
         {articles.map((a) => {
           return (
             <List item>
-              <MiniArticle title={a.title} imgSrc={a.imgSrc} />
+              <MiniArticle title={a.title} imgSrc={a.imgHeader} />
             </List>
           );
         })}
