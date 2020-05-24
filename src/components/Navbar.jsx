@@ -1,16 +1,18 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Link } from "@material-ui/core";
 import styled from "styled-components";
 
 const Navbar = () => {
+  const preventDefault = (event) => event.preventDefault();
+
   return (
     <Container>
       <Grid container spacing={3}>
         <Grid item>
-          <a>Home</a>
+          <Link href="/">Home</Link>
         </Grid>
         <Grid item>
-          <a>Program</a>
+          <Link href="/program">Program</Link>
         </Grid>
       </Grid>
     </Container>
