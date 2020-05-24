@@ -31,7 +31,8 @@ export default MiniArticle;
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 750,
+    maxWidth: 750,
+    minWidth: 350,
   },
   media: {
     height: 140,
