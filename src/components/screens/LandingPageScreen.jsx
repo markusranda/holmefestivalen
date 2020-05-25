@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MiniArticle from "../Article/MiniArticle";
 import { List } from "@material-ui/core";
+import PageContainer from "../PageContainer";
 
 const LandingPageScreen = (props) => {
   const { articles } = props;
@@ -23,13 +24,6 @@ const LandingPageScreen = (props) => {
 };
 
 export default LandingPageScreen;
-
-const PageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
-`;
 
 const TurboList = styled(List)`
   max-width: 750px;
