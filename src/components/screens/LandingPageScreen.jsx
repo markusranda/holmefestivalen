@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MiniArticle from "../Article/MiniArticle";
-import { List, Typography, Paper } from "@material-ui/core";
+import { List, Typography } from "@material-ui/core";
 import PageContainer from "../PageContainer";
 import { faq } from "../../data/faq";
 
