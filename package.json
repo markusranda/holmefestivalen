@@ -1,7 +1,8 @@
 {
+  "homepage": "http://markusranda.github.io/holmefestivalen",
   "name": "holmefestivalen",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "@testing-library/jest-dom": "^4.2.4",
