@@ -18,7 +18,12 @@ const MiniArticle = (props) => {
         <CardActionArea>
           <TurboCardMedia image={imgSrc} title={title} />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              color="secondary"
+            >
               {title}
             </Typography>
           </CardContent>
@@ -33,6 +38,7 @@ export default MiniArticle;
 const TurboCard = styled(Card)`
   max-width: 750px;
   width: 100%;
+  padding: 1rem;
 `;
 
 const TurboCardMedia = styled(CardMedia)`

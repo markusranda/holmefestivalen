@@ -5,16 +5,17 @@ import styled from "styled-components";
 const Article = (props) => {
   const { articles, match } = props;
   const id = match.params.id;
-  const { title, imgMain, ingress, paragraph } = articles[id];
+  const { title, imgMain, imgSec, ingress, paragraph } = articles[id];
   return (
     <TurboList>
-      <Typography gutterBottom align="center" color="primary" variant="h1">
+      <Typography variant="h3" color="primary">
         {title}
       </Typography>
-      <img alt="Hovedbilde" src={"../" + imgMain} />
+      {imgMain ? <img alt="Hovedbilde" src={"../" + imgMain} /> : ""}
       <Ingress align="center" color="primary" variant="p">
         {ingress}
       </Ingress>
+      {imgSec ? <img alt="sekundærbilde" src={"../" + imgSec} /> : ""}
       <Paragraph align="center" color="primary" variant="p">
         {paragraph}
       </Paragraph>
@@ -32,10 +33,12 @@ const Ingress = styled(Typography)`
 `;
 
 const Paragraph = styled(Typography)`
+  margin: 25px;
   max-width: 1000px;
 `;
 
 const TurboList = styled(List)`
+  margin-bottom: 115px;
   display: flex;
   align-items: center;
   align-content: center;

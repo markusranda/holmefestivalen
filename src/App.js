@@ -6,30 +6,9 @@ import LandingPageScreen from "./components/screens/LandingPageScreen";
 import ProgramScreen from "./components/screens/ProgramScreen";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import { withStyles } from "@material-ui/core";
+import { articles } from "./data/articles";
 
 function App() {
-  const articles = [
-    {
-      id: 0,
-      title: "Løklympiske Leker",
-      ingress: "Etter lang tid returner Løklympiske leker til holmefestivalen.",
-      paragraph:
-        "Årets Løklympiske leker returnerer med enda tøffere utfordringer, som både utfordrer sinn og fordøyelsessystem.. Årets deltakere har mye å se frem til.",
-      imgHeader: "whoomp_header.png",
-      imgMain: "Whoomp.png",
-    },
-    {
-      id: 1,
-      title: "Gamle muligheter",
-      imgSrc: "https://via.placeholder.com/750",
-    },
-    {
-      id: 2,
-      title: "Fine muligheter",
-      imgSrc: "https://via.placeholder.com/750",
-    },
-  ];
-
   const GlobalCss = withStyles({
     // @global is handled by jss-plugin-global.
     "@global": {

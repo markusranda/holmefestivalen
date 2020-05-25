@@ -4,6 +4,30 @@
   font-family: "Chelsea Market", cursive !important;
 }
 
+@media only screen and (max-width: 1200px) {
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 1rem !important;
+  }
+  h3 {
+    font-size: 2rem !important;
+  }
+  h4 {
+    font-size: 1rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+}
+
 .App {
   text-align: center;
 }

@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <Container>
       <Buttons>
-        <Grid container spacing={3}>
+        <Grid container>
           <Grid item>
             <TurboLink underline="none" color="secondary" href="/">
               Home
@@ -39,12 +39,15 @@ const Logo = styled.div`
   align-content: flex-end;
   margin-right: 25px;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 0.9rem !important;
+  }
 `;
 
 const TurboLink = styled(Link)`
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1rem;
   && {
     border: none;
     padding: 16px 32px;
@@ -54,6 +57,10 @@ const TurboLink = styled(Link)`
       background-color: #333333;
       color: white;
     }
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
   }
 `;
 
