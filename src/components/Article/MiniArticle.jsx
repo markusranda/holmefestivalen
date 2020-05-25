@@ -5,36 +5,38 @@ import {
   CardMedia,
   Typography,
   CardContent,
+  Link,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import styled from "styled-components";
 
 const MiniArticle = (props) => {
-  const { title, imgSrc } = props;
-
-  const classes = useStyles();
+  const { id, title, imgSrc } = props;
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia className={classes.media} image={imgSrc} title={title} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <TurboCard>
+      <Link href={"/article/" + id}>
+        <CardActionArea>
+          <TurboCardMedia image={imgSrc} title={title} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {title}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
+    </TurboCard>
   );
 };
 
 export default MiniArticle;
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 750,
-    minWidth: 350,
-  },
-  media: {
-    height: 140,
-  },
-});
+const TurboCard = styled(Card)`
+  max-width: 750px;
+  width: 100%;
+`;
+
+const TurboCardMedia = styled(CardMedia)`
+  max-width: 1000px;
+  width: 100%;
+  height: 150px;
+`;

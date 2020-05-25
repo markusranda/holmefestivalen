@@ -31,7 +31,10 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
-const TurboList = styled(List)``;
+const TurboList = styled(List)`
+  max-width: 750px;
+  width: 100%;
+`;
 
 const CoverImage = styled.img`
   max-width: 100%;

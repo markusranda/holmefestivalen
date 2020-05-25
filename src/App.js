@@ -5,6 +5,7 @@ import Article from "./components/Article/Article";
 import LandingPageScreen from "./components/screens/LandingPageScreen";
 import ProgramScreen from "./components/screens/ProgramScreen";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { withStyles } from "@material-ui/core";
 
 function App() {
   const articles = [
@@ -29,8 +30,22 @@ function App() {
     },
   ];
 
+  const GlobalCss = withStyles({
+    // @global is handled by jss-plugin-global.
+    "@global": {
+      // You should target [class*="MuiButton-root"] instead if you nest themes.
+      ".MuiTypography-colorPrimary": {
+        color: "#454346",
+      },
+      ".MuiTypography-colorSecondary": {
+        color: "#f47023",
+      },
+    },
+  })(() => null);
+
   return (
     <React.Fragment>
+      <GlobalCss />
       <Navbar />
       <BrowserRouter>
         <Switch>
