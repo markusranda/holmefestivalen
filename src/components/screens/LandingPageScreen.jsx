@@ -3,25 +3,8 @@ import styled from "styled-components";
 import MiniArticle from "../Article/MiniArticle";
 import { List } from "@material-ui/core";
 
-const LandingPageScreen = () => {
-  const articles = [
-    {
-      id: 0,
-      title: "OnionMania",
-      imgHeader: "whoomp_header.png",
-      imgMain: "Whoomp.png",
-    },
-    {
-      id: 1,
-      title: "Gamle muligheter",
-      imgSrc: "https://via.placeholder.com/750",
-    },
-    {
-      id: 2,
-      title: "Fine muligheter",
-      imgSrc: "https://via.placeholder.com/750",
-    },
-  ];
+const LandingPageScreen = (props) => {
+  const { articles } = props;
 
   return (
     <PageContainer>
@@ -29,9 +12,9 @@ const LandingPageScreen = () => {
       <TurboList container spacing={3}>
         {articles.map((a) => {
           return (
-            <List item>
-              <MiniArticle title={a.title} imgSrc={a.imgHeader} />
-            </List>
+            <TurboList item>
+              <MiniArticle id={a.id} title={a.title} imgSrc={a.imgHeader} />
+            </TurboList>
           );
         })}
       </TurboList>
