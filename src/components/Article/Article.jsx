@@ -41,7 +41,7 @@ const TurboList = styled(List)`
   align-content: center;
   flex-direction: column;
   && {
-    margin-top: 55px;
+    margin-top: 155px;
   }
   img {
     width: 100%;
