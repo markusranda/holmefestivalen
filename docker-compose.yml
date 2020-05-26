@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  webapp:
+    build:
+      context: .
+    entrypoint: ["node", "server.js"]
+    networks:
+       - prod
+    ports:
+       - 3000:3000
+
+networks:
+  prod:
