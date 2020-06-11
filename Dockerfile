@@ -2,9 +2,8 @@ FROM node:latest
 
 WORKDIR /usr/src/app
 
-COPY build ./build/
-COPY server.js .
-COPY package.json .
-COPY package-lock.json .
+COPY . .
 
 RUN npm clean-install
+
+RUN npm run-script build
