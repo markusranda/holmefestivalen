@@ -6,7 +6,6 @@ const port = 3000;
 app.use(express.static(__dirname));
 
 app.get("*.png", (req, res) => {
-  console.log(req);
   res.sendFile(path.join(__dirname, "build", req.url));
 });
 
