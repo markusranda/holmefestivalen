@@ -10,7 +10,7 @@ const LandingPageScreen = (props) => {
 
   return (
     <PageContainer>
-      <CoverImage src="landing_page.png" />
+      <CoverImage src="build/landing_page.png" />
       <Title gutterBottom variant="h4" color="primary">
         Rykende Ferske nyheter
       </Title>
