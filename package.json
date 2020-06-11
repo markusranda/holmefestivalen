@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "/build",
   "name": "holmefestivalen",
   "version": "0.1.0",
   "private": false,
@@ -37,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
   }
 }
